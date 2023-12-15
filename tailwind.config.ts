@@ -12,6 +12,7 @@ const config: Config = {
         primary: '#E4E4FF',
         secondary: '#181725',
         teritary: '#2B2C3B',
+        accent: '#fb923c',
       },
     },
   },
