@@ -118,7 +118,7 @@ export default function projects() {
           return (
             <div
               key={project.name}
-              className="lg:w-[97.6%] xl:w-[47.6%] box-border m-[1.2%] h-fit border-primary rounded-xl border-2 hover:scale-105 hover:bg-teritary ease-in duration-100 hover:cursor-pointer"
+              className="lg:w-[97.6%] xl:w-[47.6%] box-border m-[1.2%] h-fit border-primary rounded-xl border-2 hover:scale-105 hover:bg-tertiary ease-in duration-100 hover:cursor-pointer"
             >
               <div className="m-6">
                 <h3 className="font-bold my-1">{project.name}</h3>
