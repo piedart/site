@@ -36,7 +36,7 @@ export default function Home() {
             <ul>
               <div className="flex flex-row align-middle items-center my-2">
                 <svg viewBox="0 0 128 128" width="24px" height="24px">
-                  <path fill="#fff" d="M22.67 47h99.67v73.67H22.67z"></path>
+                  <path fill="#181725" d="M22.67 47h99.67v73.67H22.67z"></path>
                   <path
                     data-name="original"
                     fill="#fb923c"
