@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function blog() {
   return (
     <div className="flex flex-col items-center">
@@ -15,7 +17,7 @@ export default function blog() {
           <div className="w-1/3 mr-16">
             <h3 className="font-bold">December 15th 2023</h3>
           </div>
-          <div className="w-fit">
+          <Link className="w-fit" href="/blog/microservice-discord-bots">
             <h3 className="font-bold text-2xl mb-6 text-primary">Microservice Discord Bots</h3>
             <p className="font-light text-sm">
               There once was a black sheep who did black sheep stuff, because sheep go bahh. There once was a black sheep who did black
@@ -44,7 +46,7 @@ export default function blog() {
                 Discord
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
