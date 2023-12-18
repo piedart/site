@@ -26,12 +26,12 @@ export const components = {
     </h4>
   ),
   ul: (props: any) => (
-    <ul {...props} className="list-disc pl-5">
+    <ul {...props} className="list-disc pl-8 my-2">
       {props.children}
     </ul>
   ),
   ol: (props: any) => (
-    <ol {...props} className="list-decimal pl-8">
+    <ol {...props} className="list-decimal pl-12 my-2">
       {props.children}
     </ol>
   ),
@@ -41,7 +41,7 @@ export const components = {
     </li>
   ),
   p: (props: any) => (
-    <p {...props} className="font-light text-md">
+    <p {...props} className="font-light text-md my-5">
       {props.children}
     </p>
   ),
@@ -50,5 +50,5 @@ export const components = {
       {props.children}
     </code>
   ),
-  img: (props: any) => <Image sizes="100vw" style={{ width: '100%', height: 'auto' }} {...props} className="text-center" />,
+  img: (props: any) => <Image sizes="100vw" style={{ width: '100%', height: 'auto' }} {...props} />,
 };
