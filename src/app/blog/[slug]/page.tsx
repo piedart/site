@@ -10,7 +10,6 @@ export default async function RemoteMdxPage() {
     options: { parseFrontmatter: true },
     components: components,
   });
-  console.log(frontmatter);
   return (
     <div>
       <div className="flex flex-col align-middle items-center mb-20">
