@@ -3,7 +3,8 @@ import { components } from '@/components/mdx-remote';
 import { compileMDX } from 'next-mdx-remote/rsc';
 
 export default async function RemoteMdxPage() {
-  const mdxText: string = readFileSync('http://tobyc.uk/posts/microservice-discord-bots.mdx').toString();
+  // const mdxText: string = readFileSync('http://tobyc.uk/posts/microservice-discord-bots.mdx').toString();
+  const mdxText: string = readFileSync('src/posts/microservice-discord-bots.mdx').toString();
 
   const { content, frontmatter } = await compileMDX<{ title: string; date: Date }>({
     source: mdxText,
