@@ -85,7 +85,7 @@ export default function Home() {
                   ></path>
                 </svg>
 
-                <p className="ml-2 line-through">- HTML</p>
+                <p className="ml-2">- HTML</p>
               </div>
               <div className="flex flex-row align-middle items-center my-2">
                 <svg viewBox="0 0 128 128" width="24px" height="24px">
@@ -95,7 +95,7 @@ export default function Home() {
                   ></path>
                 </svg>
 
-                <p className="ml-2 line-through">- CSS</p>
+                <p className="ml-2">- CSS</p>
               </div>
             </ul>
           </div>
@@ -202,10 +202,10 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <h4 className="text-sm mt-4">
+        {/* <h4 className="text-sm mt-4">
           ^ Disclaimer: CSS (Cascading Style Sheets) and HTML (Hyper Text Markup Language) are{' '}
           <span className="text-orange-400">NOT</span> programming languages.
-        </h4>
+        </h4> */}
       </div>
       {/* <div className="mt-10">
         <h2 className="text-2xl font-semibold">What Are My Interests?</h2>
