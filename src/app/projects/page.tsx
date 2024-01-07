@@ -1,103 +1,16 @@
+import Link from 'next/link';
+
 const projectsData = [
   {
     name: '@Fawkes.js',
     description:
       'Fawkes is a lightweight, yet expansive, API wrapper for the Discord API - aiming to be highly usable and to provide numerous helper functions.',
     stats: {
-      stars: 5,
-      forks: 3,
+      stars: 1,
+      forks: 0,
       language: 'Typescript',
     },
-  },
-  {
-    name: '@Fawkes.js',
-    description:
-      'Fawkes is a lightweight, yet expansive, API wrapper for the Discord API - aiming to be highly usable and to provide numerous helper functions.',
-    stats: {
-      stars: 5,
-      forks: 3,
-      language: 'Typescript',
-    },
-  },
-  {
-    name: '@Fawkes.js',
-    description:
-      'Fawkes is a lightweight, yet expansive, API wrapper for the Discord API - aiming to be highly usable and to provide numerous helper functions.',
-    stats: {
-      stars: 5,
-      forks: 3,
-      language: 'Typescript',
-    },
-  },
-  {
-    name: '@Fawkes.js',
-    description:
-      'Fawkes is a lightweight, yet expansive, API wrapper for the Discord API - aiming to be highly usable and to provide numerous helper functions.',
-    stats: {
-      stars: 5,
-      forks: 3,
-      language: 'Typescript',
-    },
-  },
-  {
-    name: '@Fawkes.js',
-    description:
-      'Fawkes is a lightweight, yet expansive, API wrapper for the Discord API - aiming to be highly usable and to provide numerous helper functions.',
-    stats: {
-      stars: 5,
-      forks: 3,
-      language: 'Typescript',
-    },
-  },
-  {
-    name: '@Fawkes.js',
-    description:
-      'Fawkes is a lightweight, yet expansive, API wrapper for the Discord API - aiming to be highly usable and to provide numerous helper functions.',
-    stats: {
-      stars: 5,
-      forks: 3,
-      language: 'Typescript',
-    },
-  },
-  {
-    name: '@Fawkes.js',
-    description:
-      'Fawkes is a lightweight, yet expansive, API wrapper for the Discord API - aiming to be highly usable and to provide numerous helper functions.',
-    stats: {
-      stars: 5,
-      forks: 3,
-      language: 'Typescript',
-    },
-  },
-  {
-    name: '@Fawkes.js',
-    description:
-      'Fawkes is a lightweight, yet expansive, API wrapper for the Discord API - aiming to be highly usable and to provide numerous helper functions.',
-    stats: {
-      stars: 5,
-      forks: 3,
-      language: 'Typescript',
-    },
-  },
-  {
-    name: '@Fawkes.js',
-    description:
-      'Fawkes is a lightweight, yet expansive, API wrapper for the Discord API - aiming to be highly usable and to provide numerous helper functions.',
-    stats: {
-      stars: 5,
-      forks: 3,
-      language: 'Typescript',
-    },
-  },
-  {
-    name: '@Fawkes.js',
-    description:
-      'Fawkes is a lightweight, yet expansive, API wrapper for the Discord API - aiming to be highly usable and to provide numerous helper functions.',
-    stats: {
-      stars: 5,
-      forks: 3,
-      language: 'Typescript',
-    },
+    href: 'https://github.com/fawkes-js/gateway',
   },
 ];
 
@@ -116,7 +29,8 @@ export default function projects() {
       <div className="flex flex-wrap">
         {projectsData.map((project) => {
           return (
-            <div
+            <Link
+              href={project.href}
               key={project.name}
               className="lg:w-[97.6%] xl:w-[47.6%] box-border m-[1.2%] h-fit border-primary rounded-xl border-2 hover:scale-105 hover:bg-tertiary ease-in duration-100 hover:cursor-pointer"
             >
@@ -157,7 +71,7 @@ export default function projects() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
