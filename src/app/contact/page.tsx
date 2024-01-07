@@ -7,9 +7,6 @@ export default function contact() {
         <h3>
           <strong>Email:</strong> tobywchambers@gmail.com
         </h3>
-        <h3>
-          <strong>Mobile:</strong> 074792 19386
-        </h3>
       </div>
     </div>
   );
