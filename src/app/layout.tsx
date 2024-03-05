@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="h-screen w-screen flex flex-col justify-between">
           <div>
             <Header />
-            <div className="w-1/2 mx-[25%] mt-[50px] text-primary">{children}</div>
+            <div className="w-5/6 md:w-2/3 mx-auto xl:w-1/2 mt-[50px] text-primary">{children}</div>
           </div>
           <Footer />
         </main>
