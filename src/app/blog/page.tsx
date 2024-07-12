@@ -20,9 +20,9 @@ export default function blog() {
           <Link className="w-fit" href="/blog/microservice-discord-bots">
             <h3 className="font-bold text-2xl mb-6 text-primary">Microservice Discord Bots</h3>
             <p className="font-light text-sm">
-              There once was a black sheep who did black sheep stuff, because sheep go bahh. There once was a black sheep who did black
-              sheep stuff, because sheep go bahh. There once was a black sheep who did black sheep stuff, because sheep go bahh. There
-              once was a black sheep who did black sheep stuff, because sheep go bahh.
+              In recent years the Discord platform has been exploding in popularity - generating opportunities to develop truly amazing
+              apps using its world-class API. Traditional frameworks have taken a centralised approach - with apps lacking scalability
+              and adaptability. This post looks at the potential alternatives, and their benefits.
             </p>
             <div className="flex flex-row align-middle items-center mt-3">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20px" height="20px" className="mr-2">
