@@ -3,7 +3,7 @@ import Link from 'next/link';
 export function Footer() {
   return (
     <div className="w-1/2 mx-[25%]  h-[50px] flex flex-row justify-between py-16">
-      <h4>Copyright © 2023 Toby Chambers</h4>
+      <h4>Copyright © 2023 Toby</h4>
       <div>
         <ul className="flex flex-row">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="20px" height="20px" className="mx-1">
