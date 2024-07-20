@@ -19,11 +19,9 @@ export default function Home() {
           <span className="text-orange-400 decoration-2 ease-in duration-75 hover:cursor-pointer hover:underline">
             &quot;wannabe&quot;
           </span>{' '}
-          software engineer currently tinkering with projects spanning the computer science world. I&apos;m a wannabe software engineer
-          currently tinkering with{' '}
-          <span className="text-orange-400 decoration-2 ease-in duration-75 hover:cursor-pointer hover:underline">projects</span>{' '}
-          spanning the computer science world. I&apos;m a wannabe software engineer currently tinkering with projects spanning the
-          computer science world.
+          software engineer currently tinkering with projects spanning the computer science world. I'm based in Southern England in the
+          UK and have a deep-running interest in mathematics and computer science; this interest has led me to work on numerous
+          wide-ranging and varied projects.
         </h3>
       </div>
 
