@@ -1,5 +1,5 @@
 import { Source_Code_Pro } from 'next/font/google';
-
+import { Footer } from '../components/Footer';
 const code = Source_Code_Pro({
   subsets: ['latin'],
   display: 'swap',
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-screen flex flex-col align-middle items-center snap-center section-2 px-[20%] pt-[10vh]">
+      <div className="h-screen flex flex-col align-middle items-center snap-center section-3 px-[20%] pt-[10vh]">
         <div className="w-full flex flex-col items-start">
           <h2 className="text-teal-600 font-bold text-5xl py-[50px]">Work Experience</h2>
           <div className="flex flex-row w-full">
@@ -99,7 +99,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-screen flex flex-col align-middle items-center snap-center section-2 px-[20%] pt-[10vh]">
+      <div className=" h-screen flex  align-middle items-center snap-center section-4 px-[20%] pt-[10vh] flex-col justify-between">
         <div className="w-full flex flex-col items-start">
           <h2 className="text-teal-600 font-bold text-5xl py-[50px]">Skills</h2>
           <div className="flex flex-row flex-wrap w-full">
@@ -123,6 +123,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );
