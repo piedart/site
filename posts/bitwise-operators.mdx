@@ -70,7 +70,7 @@ For example: `5 >> 1` written in binary is `0101 >> 0001`, which results in `001
 
 ## What Are Bitwise Flags - And How do I Use Them?
 
-Bitwise flags are an efficient method of storing multiply ON/OFF values in the same value - removing the need for storing several values in a database. For example, what may previously be stored as:
+Bitwise flags are an efficient method of storing multiple ON/OFF values in the same value - removing the need for storing several values in a database. For example, what may previously be stored as:
 
 ```js
 const user = {
@@ -134,3 +134,9 @@ Or, if we'd like to add multiple flags:
 ```js
 user.flags = user.flags | ADMINISTRATOR | EMAIL_VERIFIED | PHONE_VERIFIED;
 ```
+
+## Advantages of Using Bitwise Flags
+
+## Disadvantages of Using Bitwise Flags
+
+## Conclusion

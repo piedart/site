@@ -16,7 +16,7 @@ const components = {
   ),
   h3: (props: any) => <h3 className="text-2xl font-bold my-2 mt-6">{props.children}</h3>,
   p: (props: any) => <p className="my-2">{props.children}</p>,
-  code: (props: any) => <code className="bg-stone-50 text-teal-600 p-[1px] rounded-md">{props.children}</code>,
+  code: (props: any) => <code className="bg-stone-50 text-teal-600 p-[3px] rounded-md">{props.children}</code>,
 };
 
 export default async function blog({ params }: any) {
@@ -40,7 +40,7 @@ export default async function blog({ params }: any) {
             </p>
           </div>
         </div>
-        <div id="blog-post">
+        <div id="blog-post" className="mb-64">
           <ReactMarkdown components={components} rehypePlugins={[rehypeRaw]} className="markdown" remarkPlugins={[remarkGfm]}>
             {data.content}
           </ReactMarkdown>

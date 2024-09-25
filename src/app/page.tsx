@@ -6,12 +6,12 @@ export default function Home() {
       <div className="h-screen flex flex-col items-center snap-center section-1">
         <div className="typewriter mt-[30vh] m-5 hidden lg:block">
           <h1 className="font-bold text-4xl text-balance">
-            Hi, I'm <span className="text-teal-600">Toby</span> - an Aspiring Computer Science Student
+            Hi, I&apos;m <span className="text-teal-600">Toby</span> - an Aspiring Computer Science Student
           </h1>
         </div>
         <div className="block lg:hidden mt-[30vh] m-5 text-center">
           <h1 className="font-bold text-4xl">
-            Hi, I'm <span className="text-teal-600">Toby</span> - an Aspiring Computer Science Student
+            Hi, I&apos;m <span className="text-teal-600">Toby</span> - an Aspiring Computer Science Student
           </h1>
         </div>
         <div className="flex flex-row">

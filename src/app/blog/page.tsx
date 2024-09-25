@@ -44,9 +44,9 @@ export default function blog() {
         If you have any questions or queries, please do contact me using any of the methods below.
       </p>
       <div className="flex flex-col mt-16">
-        {blogs.map((blog) => {
+        {blogs.map((blog, i) => {
           return (
-            <Link href={`/blog/${blog.link}`}>
+            <Link href={`/blog/${blog.link}`} key={i}>
               <div className=" my-5 flex flex-col lg:flex-row w-full items-center ease-in-out duration-200 rounded-xl p-2 lg:p-8 hover:cursor-pointer hover:bg-stone-50 hover:scale-105">
                 <div className="h-full w-1/4 hidden lg:block text-wrap">
                   <h3 className="font-bold text-lg">{blog.date}</h3>
