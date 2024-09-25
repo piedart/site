@@ -84,3 +84,29 @@ body {
   /* -webkit-clip-path: polygon(0 0, 0 100vw, 100vw 80px, 100vw 0); */
   clip-path: polygon(0 0, 100vw 0, 100vw 250px, 0 0);
 }
+
+#blog-post h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  @apply text-gray-800;
+}
+
+.markdown table {
+  width: 100%;
+  align-items: center;
+}
+
+.markdown table tr {
+  text-align: left;
+}
+
+.markdown table thead tr {
+  border-bottom: #0d9488;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}

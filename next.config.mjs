@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configure `pageExtensions`` to include MDX files
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  // Optionally, add any other Next.js config below
+  webpack: function (config) {
+    config.module.rules.push({
+      test: /\.mdx$/,
+      use: 'raw-loader',
+    });
+    return config;
+  },
 };
 
 export default nextConfig;

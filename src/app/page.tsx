@@ -1,32 +1,36 @@
-import { Source_Code_Pro } from 'next/font/google';
-import { Footer } from '../components/Footer';
-const code = Source_Code_Pro({
-  subsets: ['latin'],
-  display: 'swap',
-});
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <div className="snap-y scroll-smooth h-screen overflow-y-auto snap-mandatory">
-      <div className="h-screen flex flex-col align-middle items-center snap-center section-1">
-        <div className="typewriter mt-[30vh] m-5">
-          <h1 className="font-bold text-4xl ">
+      <div className="h-screen flex flex-col items-center snap-center section-1">
+        <div className="typewriter mt-[30vh] m-5 hidden lg:block">
+          <h1 className="font-bold text-4xl text-balance">
+            Hi, I'm <span className="text-teal-600">Toby</span> - an Aspiring Computer Science Student
+          </h1>
+        </div>
+        <div className="block lg:hidden mt-[30vh] m-5 text-center">
+          <h1 className="font-bold text-4xl">
             Hi, I'm <span className="text-teal-600">Toby</span> - an Aspiring Computer Science Student
           </h1>
         </div>
         <div className="flex flex-row">
-          <div className="bg-teal-600 px-4 py-2 rounded-md mr-6 landing-btn">
-            <p className="font-bold text-lg ">Download CV</p>
-          </div>
-          <div className="bg-gray-400 px-4 py-2 rounded-md">
-            <p className="font-semibold text-lg ">Read Blog</p>
-          </div>
+          <a href="/cv.pdf" download="cv.pdf">
+            <div className="bg-teal-600 px-4 py-2 rounded-md mr-6 landing-btn">
+              <p className="font-bold text-lg ">Download CV</p>
+            </div>
+          </a>
+          <Link href="/blog">
+            <div className="bg-gray-400 px-2 py-1 rounded-md hover:cursor-pointers border-solid border-4 border-transparent hover:bg-transparent hover:border-gray-400 ease-in-out duration-200">
+              <p className="font-semibold text-lg ">Read Blog</p>
+            </div>
+          </Link>
         </div>
       </div>
 
       <div className="section-2-bg"></div>
 
-      <div className="h-screen flex flex-col align-middle items-center snap-center section-2 px-[20%] pt-[10vh]">
+      <div className="h-screen flex flex-col align-middle items-center snap-center section-2 px-[10%] lg:px-[20%] lg:pt-[10vh]">
         <div className="w-full flex flex-col items-start">
           <h2 className="text-teal-600 font-bold text-5xl py-[50px]">Education</h2>
           <div className="flex flex-row w-full">
@@ -69,7 +73,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-screen flex flex-col align-middle items-center snap-center section-3 px-[20%] pt-[10vh]">
+      <div className="h-screen flex flex-col align-middle items-center snap-center section-3 px-[10%] lg:px-[20%] lg:pt-[10vh]">
         <div className="w-full flex flex-col items-start">
           <h2 className="text-teal-600 font-bold text-5xl py-[50px]">Work Experience</h2>
           <div className="flex flex-row w-full">
@@ -99,10 +103,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" h-screen flex  align-middle items-center snap-center section-4 px-[20%] pt-[10vh] flex-col justify-between">
+      <div className=" h-screen flex  align-middle items-center snap-center section-4 px-[10%] lg:px-[20%] lg:pt-[10vh] flex-col justify-between">
         <div className="w-full flex flex-col items-start">
           <h2 className="text-teal-600 font-bold text-5xl py-[50px]">Skills</h2>
-          <div className="flex flex-row flex-wrap w-full">
+          <div className="flex flex-row flex-wrap w-full justify-center">
             <div className="w-52 h-28 bg-teal-600 rounded-lg flex flex-row items-center justify-center m-5">
               <h3 className="font-semibold text-xl">Javascript</h3>
             </div>
@@ -123,7 +127,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   );
