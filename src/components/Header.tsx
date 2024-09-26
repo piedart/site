@@ -63,7 +63,7 @@ export function Header() {
           height="50px"
           viewBox="0 0 24 24"
           fill="none"
-          className="lg:hidden"
+          className="lg:hidden mx-5"
           onClick={handleClick}
         >
           <path d="M4 18L20 18" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" />

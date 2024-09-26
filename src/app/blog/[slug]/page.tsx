@@ -7,7 +7,7 @@ import remarkGfm from 'remark-gfm';
 
 const markdownStyles = {};
 const components = {
-  img: (props: any) => <Image width="100px" style={{ width: 'auto', height: 'auto' }} {...props} />,
+  img: (props: any) => <Image width="100px" style={{ width: 'auto', height: 'auto' }} {...props} alt="" />,
   h2: (props: any) => (
     <div className="my-3">
       <h2 className="text-3xl font-bold">{props.children}</h2>
