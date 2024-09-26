@@ -2,7 +2,7 @@
 title: Microservice Discord Bots
 date: December 17th, 21:32
 readTime: 5
-description:
+description: A microservice architecture solves numerous issues that plague currentt typical library designs, namely a lack of scalability and adaptability. As well as this, they do not adequately handle constraints placed by the Discord API on the maximum number of daily identify requests, limiting a developer's testing ability.
 ---
 
 In recent years, the Discord platform has been exploding in popularity - attracting thousands of different of communities from around the world. This has been made even more special by the platform's outstanding API, which allows for easy integration and creation of 3rd party apps, 'bots'. This has given rise to thousands of apps, each offering different functionalities and features, and many using traditional libraries such as **discord.js** and **discord.py**
@@ -54,7 +54,7 @@ A bots **global rate limit** is **50 requests per second** (3000 requests per mi
 
 ## Current Discord Librarires
 
-The vast majority of smaller bots make use of popular libraries such as **discord.js**, **eris** and **discord.py**, all of which share a similar approach to managing this delicate interaction with the Discord API, whereall components of the bot are located on the same process, on the same machine:
+The vast majority of smaller bots make use of popular libraries such as **discord.js**, **eris** and **discord.py**, all of which share a similar approach to managing this delicate interaction with the Discord API, where -+all components of the bot are located on the same process, on the same machine:
 
 <img src="/flow1.png" width="2000" height="2000" className="" />
 
@@ -85,7 +85,7 @@ These **client** instances could all communicate with an independent **cache**, 
 ### Advantages of Microservices Approach
 
 - Allows for easy scaling of nodes in response to demand - e.g a sudden influx of users can be handled by simply increasing both client and gateway processes.
-- Allows for disprportionate processes, for example if an app received few gateway requests, but required extensive client processing, then more client processes could be deployed than gateway processes.
+- Allows for disproportionate processes, for example if an app received few gateway requests, but required extensive client processing, then more client processes could be deployed than gateway processes.
 - Allows for external access to data / the cache, from outside of the application. This could be useful for integrating with other applications, such as a website.
 - Increased redundancy, as if a single client process becomes unavailable, this is absorbed by the other client processes. Whilst an outage on a gateway process would not have redundancy - due to discord only sending gateway events to those shards - this could be resolved by deploying two gateway processes for each set of shards, and then later filtering out duplicate events.
 

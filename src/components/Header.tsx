@@ -1,13 +1,27 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
-    console.log(isOpen);
     setIsOpen(!isOpen);
   };
+
+  const useWidth = () => {
+    const [width, setWidth] = useState(0); // default width, detect on server.
+    const handleResize = () => {
+      if (window.innerWidth > 1024) setIsOpen(false);
+    };
+    useEffect(() => {
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, [handleResize]);
+    return width;
+  };
+
+  useWidth();
+
   return (
     <div className="w-full">
       <div className="flex flex-row justify-end w-full items-center">

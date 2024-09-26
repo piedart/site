@@ -1,0 +1,111 @@
+---
+title: Data Structures
+date: September 10th 2024
+readTime: 5
+description:
+---
+
+A data structure is a type of storage, that organises data in a way so that it can be used efficiently. This week I will look at the different types of data structures, and their varying uses.
+
+## Primitive & Non-Primitive Data Structures
+
+Data structures can be categorised into two groups - **primitive data structures** and **non-primitive data structures**. Primitive data structures are basic types that are often built into a programming language- e.g **integers**, **characters** and **strings**. These are the simplest data structures, and are efficient at storing single values of a single type. However, non-primitive data structures (e.g **arrays** and **linked lists**) are much more complex, and can store sets of data of more than one type.
+
+### Primitive Data Structures
+
+These are **fundamental types** that are built into programming languages and do not need to be derived from other data structures. They represent single, simple values - such as an integer. Because of this simplicity, they are extremely memory efficient. They also have a fixed size, and thus the amount of memory they require is predefined by their type (e.g integer requiring a different amount to a string), and does not change. This memory is typically allocated on the stack.
+
+Examples of primitive data structures include:
+
+#### `Integer` Structure
+
+These represent **whole numbers**, that may be either negative or positive. Different programming languages have different primitive data structures, for example Java makes use of the `long` keyword, which denotes a 64 bit integer, whereas others such as Javascript do not make such distinctions.
+
+#### `Boolean` Structure
+
+These represent a truthy/falsy value, in the form of **true** or **false**, and are very simple data structures.
+
+#### `Character` Structure
+
+These represent a character, e.g `s`. Different programming languages implement this differently, with some - e.g Javascript, abstracting a `string` as an array of characters, without the need for this to be defined.
+
+### Non-Primitive Data Structures
+
+These are data structures that are more **complex**, and normally not built into the programming language, instead being constructed using **primitive data structures**. Because of this complexity, they allow for the management of complex data, and allow developers to handle challenging scenarios. They are able to hold multiple data rtypes, and are designed to store a collection of items.
+
+Because of this, they do not have a predefined size, and thus memory is allocated in the heap, rather than the stack.
+
+### Comparison Between Primitive & Non-Primitive Data Structures
+
+| Property   | Primitive                                                                | Non-Primitive                                                                                |
+| ---------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| Memory     | Memory is allocated on the stack, and is of a fixed and predefined size. | Memory is allocated on the heap, and can be of varying sizes, based on the structure's size. |
+| Storage    | Can store single values of a single type.                                | Can store multiple values of different types.                                                |
+| Efficiency | Extremely efficient due to their simplicity.                             | Can be less efficient due to there being more overhead when creating them.                   |
+| Usage      | Useful for representing and storing simple, single values.               | Using for organising complex data sets and patterns.                                         |
+
+## Linear & Non-Linear Data Structures
+
+Non-primitive data structures can then be categorised further - whilst primitive data structres cannot. These can be categorised as **linear** and **non-linear** data structures, where linear data structures are structures in which data is arranged in a **sequence** (one element after the other), whilst in non-linear data structures, it is not, and instead the data forms a **hierarchy**, with elements having multiple ways of connecting to other elements.
+
+### Linear Data Structures
+
+Because linear data structures are structured sequentially, they can be much more easily implemented, because computer memory is also arranged in a linear way.
+
+#### `Array` Structure
+
+These are a collection of elements - of the same type- that are in sequential order. Elements of an array are accesed with their index number. They allow data to be stored as a collection.
+
+It is also vital in the implementation of other data structures, such as stacks and queues.
+
+#### `Stack` Structure
+
+This stores elements according to the **LIFO (Last in First Out)** principle, meaning that the last element added to a stack, will be the first removed. These operations are refered to as `PUSH` and `POP` operations, with a `POP` removing the last element from the stasck, and a `PUSH` inserting an element onto the stack.
+
+They can be implemented using an array, or a linked list.
+
+#### `Queue` Structure
+
+This stores elements according to the **FIFO (First in First Out)** principle, meaning that the first element added to a queue, will be the first removed.
+
+Elements are inserted onto the queue at one end, and removed from the other.
+
+They cann be implemented using arrays, linked lists or stacks.
+
+#### `Linked List` Structure
+
+Elements are connected to various nodes, with each node storing two items: the actual data, and a pointer that contains the address of the subsequent node in the list.
+
+The last node will have a null pointer - demonstrating that it leads to nothing. This last node is also called the **tail**, due to it being at the end of the list.
+
+The first node is called the **head** and is the access point of the list, pointing to the first element of the linked list.
+
+### Non-Linear Data Structures
+
+#### `Tree` Structure
+
+This forms a hierarchy, containing a collection of nodes, each of which stores a value and a list of references to otjher nodes - it's **children**.
+
+It is similar to a linked list, but can have more than one child node. Additionally, they are similar to graphs, but there can only be one edge between nodes.
+
+#### `Graph` Structure
+
+This forms a network of nodes and edges, with the possibility of multiple edges connecting nodes. These are similar to tree's and linked lists.
+
+### Comparison Between Linear & Non-Linear Data Structures
+
+| Property          | Linear Data Structures                                                  | Non-Linear Data Structures                                                                                     |
+| ----------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Arrangement       | Elements are arranged in a linear order (data is stored consecutively). | Elements are organised hierarchily, in a non-sequential structure.                                             |
+| Storage           | Each element is directly linked to its previous and next elements.      | Each element is stored in a random manner, at random memory locations, and may be linked to mutliple elements. |
+| Implementation    | Considerably easier to implement due to their relative simplicity.      | More complex to implement.                                                                                     |
+| Layers            | The data is arranged in a single layer.                                 | The data is arranged in multiple layers.                                                                       |
+| Traversability    | Elements can be traversed in a single run only.                         | Elements cannot be traversed in a single run only, and mutliple runs are required.                             |
+| Memory Efficiency | Memory is not utilised efficiently.                                     | Memory is utilised efficiently.                                                                                |
+| Uses              | They are widely used in software development.                           | They are widely used in Artificial intelligence and image processing.                                          |
+
+## Conclusion
+
+Whilst researching different data structures I have discovered that there exists scenarios where simple, primitive data structures are simply insufficient, and that sometimes other - non-primitive data structures are needed.
+
+Whilst developing my Graph Theory tool, I largely mirrored elements of the Graph data structure, without the actual understanding of what it is, nor how it worked - something I now have.

@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import { Footer } from '../../components/Footer';
 const blogs = [
   {
     title: 'Microservice Discord Bots',
     link: '/microservice-discord-bots',
     description:
-      'Nullam non nisl sed sapien laoreet bibendum. Fusce placerat commodo eros, et aliquet orci faucibus id. Nam placerat orci sed nisi tempus, et dictum lectus egestas. Pellentesque rhoncus lectus sem, finibus tincidunt nibh feugiat at. Nunc et nisi vitae arcu egestas fermentum eu ac risus. Mauris accumsan dictum urna, id auctor nisl accumsan quis. Aenean a nisl risus. Proin auctor orci vitae turpis ullamcorper, in aliquam neque dignissim.',
-    readTime: '5 minutes',
+      "A microservice architecture solves numerous issues that plague currentt typical library designs, namely a lack of scalability and adaptability. As well as this, they do not adequately handle constraints placed by the Discord API on the maximum number of daily identify requests, limiting a developer's testing ability.",
+    readTime: '7 minutes',
     date: 'December 15th 2023',
   },
   {
@@ -21,15 +20,15 @@ const blogs = [
     title: 'Bitwise Operators',
     link: '/bitwise-operators',
     description:
-      'Nullam non nisl sed sapien laoreet bibendum. Fusce placerat commodo eros, et aliquet orci faucibus id. Nam placerat orci sed nisi tempus, et dictum lectus egestas. Pellentesque rhoncus lectus sem, finibus tincidunt nibh feugiat at. Nunc et nisi vitae arcu egestas fermentum eu ac risus. Mauris accumsan dictum urna, id auctor nisl accumsan quis. Aenean a nisl risus. Proin auctor orci vitae turpis ullamcorper, in aliquam neque dignissim.',
-    readTime: '10 minutes',
-    date: 'December 15th 2023',
+      'Bitwise flags are an incredible way of efficiently storing yes/no values in a single value - helpiong to increase efficiency, especially when accessing data from an external service, such as a database or external API. This week I look at their uses, and their potential implementations.',
+    readTime: '5 minutes',
+    date: 'September 20th 2024',
   },
   {
     title: 'Data Structures',
     link: '/data-structures',
     description:
-      'Nullam non nisl sed sapien laoreet bibendum. Fusce placerat commodo eros, et aliquet orci faucibus id. Nam placerat orci sed nisi tempus, et dictum lectus egestas. Pellentesque rhoncus lectus sem, finibus tincidunt nibh feugiat at. Nunc et nisi vitae arcu egestas fermentum eu ac risus. Mauris accumsan dictum urna, id auctor nisl accumsan quis. Aenean a nisl risus. Proin auctor orci vitae turpis ullamcorper, in aliquam neque dignissim.',
+      'Primitive data structures such as integers and characters can only get you so far, and some problems call for different, complex (non-primitive) data structures. This week I look at these different data structures on a broad level, looking at what they are, and how they work.',
     readTime: '10 minutes',
     date: 'December 15th 2023',
   },
@@ -75,7 +74,6 @@ export default function blog() {
           );
         })}
       </div>
-      <Footer />
     </div>
   );
 }

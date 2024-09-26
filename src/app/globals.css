@@ -9,20 +9,11 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-* {
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .typewriter h1 {
@@ -109,4 +100,8 @@ p {
   border-bottom-style: solid;
   margin-top: 4px;
   margin-bottom: 4px;
+}
+th,
+td {
+  padding: 10px;
 }

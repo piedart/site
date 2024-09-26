@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="snap-y scroll-smooth h-screen overflow-y-auto snap-mandatory">
+    <div className="">
       <div className="h-screen flex flex-col items-center snap-center section-1">
         <div className="typewriter mt-[30vh] m-5 hidden lg:block">
           <h1 className="font-bold text-4xl text-balance">
@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="section-2-bg"></div>
+      {/* <div className="section-2-bg"></div> */}
 
       <div className="h-screen flex flex-col align-middle items-center snap-center section-2 px-[10%] lg:px-[20%] lg:pt-[10vh]">
         <div className="w-full flex flex-col items-start">
