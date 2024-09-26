@@ -72,7 +72,7 @@ export function Header() {
         </svg>
       </div>
       <div className={`w-full ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-16">
           <Link href="/">
             <div className="ml-10 m-3 p-2 rounded-md hover:scale-110 ease-in-out duration-100 hover:cursor-pointer hover:shadow-md hover:font-semibold">
               <p>

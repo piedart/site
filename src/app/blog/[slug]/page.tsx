@@ -26,7 +26,7 @@ export default async function blog({ params }: any) {
   const content = await import(`/posts/${params.slug}.mdx`);
   const data = matter(content.default);
   return (
-    <div className="overflow-y-auto h-screen">
+    <div className="">
       <div className="w-[80%] mx-[10%] md:w-[70%] md:mx-[15%] lg:w-[60%] lg:mx-[20%] xl:w-[50%] xl:mx-[25%] mt-32">
         <div className="flex flex-col items-center mb-16">
           <h3 className="text-4xl font-bold text-center">{data.data.title}</h3>

@@ -11,13 +11,15 @@
 
 * {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
-  overflow-y: auto;
+}
+main {
+  overflow-y: scroll;
 }
 
 .typewriter h1 {

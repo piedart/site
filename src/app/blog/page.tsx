@@ -36,7 +36,7 @@ const blogs = [
 
 export default function blog() {
   return (
-    <div className="w-screen px-[5%] lg:px-[20%] lg:pt-[10vh] overflow-y-auto h-screen">
+    <div className="w-screen px-[5%] lg:px-[20%] lg:pt-[10vh]h-screen">
       <h2 className="text-teal-600 font-bold text-5xl px-[5%]">Blog</h2>
 
       {/* <p className="text-lg my-3 px-[5%]">

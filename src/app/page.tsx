@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className="section-2-bg"></div> */}
+      <div className="section-2-bg"></div>
 
       <div className="h-screen flex flex-col align-middle items-center snap-center section-2 px-[10%] lg:px-[20%] lg:pt-[10vh]">
         <div className="w-full flex flex-col items-start">
