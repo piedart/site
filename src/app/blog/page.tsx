@@ -39,9 +39,9 @@ export default function blog() {
     <div className="w-screen px-[5%] lg:px-[20%] lg:pt-[10vh] overflow-y-auto h-screen">
       <h2 className="text-teal-600 font-bold text-5xl px-[5%]">Blog</h2>
 
-      <p className="text-lg my-3 px-[5%]">
+      {/* <p className="text-lg my-3 px-[5%]">
         If you have any questions or queries, please do contact me using any of the methods below.
-      </p>
+      </p> */}
       <div className="flex flex-col mt-16">
         {blogs.map((blog, i) => {
           return (
