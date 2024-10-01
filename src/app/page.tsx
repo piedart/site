@@ -165,9 +165,9 @@ export default function Home() {
           <div className="flex flex-row w-full justify-around">
             <div className="flex flex-col">
               <h3 className="text-lg font-bold">Programming Languages</h3>
-              {programmingLanguages.map((language) => {
+              {programmingLanguages.map((language, i) => {
                 return (
-                  <div className="flex flex-row align-middle items-center my-2">
+                  <div className="flex flex-row align-middle items-center my-2" key={i}>
                     <svg viewBox="0 0 128 128" width="24px" height="24px">
                       <path d={language.svg} fill="#0d9488"></path>
                     </svg>
@@ -178,9 +178,9 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <h3 className="text-lg font-bold">Technologies:</h3>
-              {technologies.map((technology) => {
+              {technologies.map((technology, i) => {
                 return (
-                  <div className="flex flex-row align-middle items-center my-2">
+                  <div className="flex flex-row align-middle items-center my-2" key={i}>
                     <svg viewBox="0 0 128 128" width="24px" height="24px">
                       <path d={technology.svg} fill="#0d9488"></path>
                     </svg>
