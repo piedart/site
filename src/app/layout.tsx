@@ -18,9 +18,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={font.className}>
         <ThemeProvider attribute="class" defaultTheme="system">
           <main className="h-screen w-screen">
-            <div className="">
-              <Header />
-              <div className="">{children}</div>
+            <div className="flex flex-col justify-between min-h-full">
+              <div className="flex flex-col">
+                <Header />
+                <div className="">{children}</div>
+              </div>
+
               <Footer />
             </div>
           </main>

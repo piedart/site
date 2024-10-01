@@ -9,7 +9,7 @@ const config: Config = {
         // 'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        primary: '#E4E4FF',
+        primary: '#0d9488',
         secondary: '#181725',
         tertiary: '#2B2C3B',
         accent: '#fb923c',
