@@ -18,7 +18,9 @@ const components = {
   h4: (props: any) => <h4 className="text-xl font-bold my-2 mt-6">{props.children}</h4>,
   p: (props: any) => <p className="my-2">{props.children}</p>,
   code: (props: any) => <code className="bg-stone-50 text-teal-600 p-[3px] rounded-md">{props.children}</code>,
-  ul: (props: any) => <ul className="list-disc">{props.children}</ul>,
+  ul: (props: any) => <ul className="list-disc list-inside">{props.children}</ul>,
+  ol: (props: any) => <ol className="list-decimal list-inside">{props.children}</ol>,
+
   li: (props: any) => <li className="my-1">{props.children}</li>,
 };
 
