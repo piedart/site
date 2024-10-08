@@ -59,8 +59,18 @@ This stage involves ensuring that declarations and statements are **semantically
 
 ## Stage 4 - Code Generation
 
+In this stage, the compiler generates our final code - this may be code in another programming language, if the compiler is a cross-language compiler - or more often it is machine code.
+
+This stage is quite large, and thus has several steps:
+
+- An **Abstract Syntax Tree** (AST) is constructed by traversing all possible paths in all files.
+- **Register descriptors** are created - these are structures which store information about the registers used in the programme.
+- **Address descriptors** are created - these store the **memory locations** used by a programme - much like pointers in the C programming language.
+- A code generator is then used to generate the actual code.
+
 ## Stage 5 - Code Optimisation
 
+This is the final stage of a compiler - and is not features in some, simple compilers, due to it not being essential. The compiler will analyse the code generated in the previous stage, and will optimise it - e.g via **loop unrolling** and **function unrolling**.
 
 ## Conclusion
 

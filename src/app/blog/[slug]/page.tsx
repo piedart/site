@@ -9,13 +9,13 @@ const markdownStyles = {};
 const components = {
   img: (props: any) => <Image width="100px" style={{ width: 'auto', height: 'auto' }} {...props} alt="" />,
   h2: (props: any) => (
-    <div className="my-3">
+    <div className="my-3 mt-8">
       <h2 className="text-3xl font-bold">{props.children}</h2>
       <div className="w-[80%] h-[1px] bg-stone-300 my-2"></div>
     </div>
   ),
   h3: (props: any) => <h3 className="text-2xl font-bold my-2 mt-6">{props.children}</h3>,
-  h4: (props: any) => <h4 className="text-xl font-bold my-2 mt-6">{props.children}</h4>,
+  h4: (props: any) => <h4 className="text-xl font-bold my-2 mt-10">{props.children}</h4>,
   p: (props: any) => <p className="my-2">{props.children}</p>,
   code: (props: any) => <code className="bg-stone-50 text-teal-600 p-[3px] rounded-md">{props.children}</code>,
   ul: (props: any) => <ul className="list-disc list-inside">{props.children}</ul>,

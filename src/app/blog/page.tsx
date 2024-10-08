@@ -6,15 +6,7 @@ const blogs = [
     description:
       "A microservice architecture solves numerous issues that plague currentt typical library designs, namely a lack of scalability and adaptability. As well as this, they do not adequately handle constraints placed by the Discord API on the maximum number of daily identify requests, limiting a developer's testing ability.",
     readTime: '7 minutes',
-    date: 'December 15th 2023',
-  },
-  {
-    title: 'Compiler Construction',
-    link: '/compiler-construction',
-    description:
-      'Nullam non nisl sed sapien laoreet bibendum. Fusce placerat commodo eros, et aliquet orci faucibus id. Nam placerat orci sed nisi tempus, et dictum lectus egestas. Pellentesque rhoncus lectus sem, finibus tincidunt nibh feugiat at. Nunc et nisi vitae arcu egestas fermentum eu ac risus. Mauris accumsan dictum urna, id auctor nisl accumsan quis. Aenean a nisl risus. Proin auctor orci vitae turpis ullamcorper, in aliquam neque dignissim.',
-    readTime: '10 minutes',
-    date: 'December 15th 2023',
+    date: 'October 5th 2024',
   },
   {
     title: 'Bitwise Operators',
@@ -25,12 +17,20 @@ const blogs = [
     date: 'September 20th 2024',
   },
   {
+    title: 'Compiler Construction',
+    link: '/compiler-construction',
+    description:
+      'In this post I look very broadly at how compilers are constructed, and the different stages involved. I hope to potentially used this knowledge to create my own compiler in the future.',
+    readTime: '10 minutes',
+    date: 'September 4th 2024',
+  },
+  {
     title: 'Data Structures',
     link: '/data-structures',
     description:
       'Primitive data structures such as integers and characters can only get you so far, and some problems call for different, complex (non-primitive) data structures. This week I look at these different data structures on a broad level, looking at what they are, and how they work.',
     readTime: '10 minutes',
-    date: 'December 15th 2023',
+    date: 'August 28th 2024',
   },
 ];
 
