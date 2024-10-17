@@ -5,23 +5,23 @@ readTime: 5
 description:
 ---
 
-Programming languages have become fundamental in in creating powerful applications - however the source code written in these languages has to be translated into a form that is executable by computers. This is done by either a compiler - which compiles source code (which is readable by a human) into object code (which is readable and runnable by a machine) - or by an interpreter, which only translates as much code as is needed to execute the next statment of the programme.
+Programming languages have become fundamental in creating powerful applications - however the source code written in these languages has to be translated into a form that is executable by computers. This is done by either a compiler - which compiles source code (which is readable by a human) into object code (which is readable and runnable by a machine) - or by an interpreter, which only translates as much code as is needed to execute the next statement of the programme.
 
 Compilers translate source code written in a higher-level programming language, into a lower-level programming language - often a machine language, to allow a computer to execute it. This process has numerous steps, and thus compilers can be hugely-complex programmes.
 
 ## Stage 1 - Lexical Analysis
 
-**Token:** A sequence of characters that are trated as one in the **grammar** of a programming language.
+**Token:** A sequence of characters that are treated as one in the **grammar** of a programming language.
 
 This is also known as **scanning**, and is the first phase of a compiler. It involves reading the source code, and breaking it into a stream of **tokens**. It does this by reading the characters in the source code, and grouping them into **lexemes** - a sequence of characters that are related. Each lexeme responds to a **token**, which are defined in the programme using regular expressions. These are also important for removing **lexical errors** - such as comments and white space.
 - For example a keyword or a type.
 
-I was inspired to write this post after reading about finite Automata in A.K. Dewdney's "The New Turing Omnibus", which lexial analysis is closely related too.
+I was inspired to write this post after reading about finite Automata in A.K. Dewdney's "The New Turing Omnibus", which lexical analysis is closely related too.
 
 
 <br></br>
 1. **Input Preprocessing:** This stage involves 'cleaning up' the source code - for example by removing whitespace and comments.
-2. **Tokenisation:** This stage is where the source text is broken up into a sequence of tokens - which it does by comparing the textto lexemes in the compiler (expressed using regular expressions).
+2. **Tokenisation:** This stage is where the source text is broken up into a sequence of tokens - which it does by comparing the text to lexemes in the compiler (expressed using regular expressions).
 3. **Token Classification:** Here, the **lexer** determines the type of each token - such as a keyword, operator or type.
 4. **Token Validation:** The **lexer** checks that each token is valid - such as a variable name being a valid and accepted name.
 5. **Ouput Generation:** The lexer generates the output of this process as a list of tokens. This list is then passed onto the next stage of the compilation process.
@@ -35,7 +35,7 @@ This stage produces a **parse tree** or an **abstract syntax tree** - this is a 
 
 ### Different Algorithms Used in Syntax Analysis:
 
-- **LL Parsing -** This is a **top-down** parsing algorithm, that starts with the **root** of the parse tree, and constructs the tree by successivelly expanding downwards. It is one of the simplest algorithms to implement.
+- **LL Parsing -** This is a **top-down** parsing algorithm, that starts with the **root** of the parse tree, and constructs the tree by successively expanding downwards. It is one of the simplest algorithms to implement.
 - **LR Parsing -** This is a **bottom-up** parsing algorithm, that starts with the **leaves** of the parse tree, and constructs the tree by successively reducing **terminals**. It is more powerful than LL parsing.
 
 

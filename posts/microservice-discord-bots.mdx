@@ -13,13 +13,13 @@ However, these historically popular libraries are hugely limited when it comes t
 
 ### Discord Gateway
 
-The gateway is responsible for **real-time communication** with clients, sending events and relevant data via a websocket connection. These events are triggered by discord users, and thus are unpredictable, and can vary in volume. Because of the nature of this websocket connection, it is vital that clients maintain it, acknowldging heartbeats and resuming sessions when a `RECONNECT` event is received. It is also possible to send events via the gateway, such as Identify (`Opcode 2`), Resume (`Opcode 6`) & Heartbeat (`Opcode 1`) events.
+The gateway is responsible for **real-time communication** with clients, sending events and relevant data via a websocket connection. These events are triggered by discord users, and thus are unpredictable, and can vary in volume. Because of the nature of this websocket connection, it is vital that clients maintain it, acknowledging heartbeats and resuming sessions when a `RECONNECT` event is received. It is also possible to send events via the gateway, such as Identify (`Opcode 2`), Resume (`Opcode 6`) & Heartbeat (`Opcode 1`) events.
 
 The gateway connection uses either **JSON** or **etf** encoding - specified by the client - and can make use of **zlib** compression for improved efficiency. The general **connection lifecycle** looks like:
 
 1. Establish connection via a `GET` request to `wss://gateway.discord.gg`, and caching the received data, before initiating the connection.
 2. Receive `HELLO` event (`Opcode 10`), which contains the `heartbeat_interval`.
-3. Begin acknowldging heartbeats received by the gateway.
+3. Begin acknowledging heartbeats received by the gateway.
 4. Send `IDENTIFY` event, containing information about the client, as well as **intents** - these determine the events which the client will receive.
 5. Receive `READY` event, and cache the data.
 6. Handle gateway disconnects by `resuming` if appropriate.
@@ -52,7 +52,7 @@ However, if the client encounters a **global ratelimit**, it will also receive:
 
 A bots **global rate limit** is **50 requests per second** (3000 requests per minute).
 
-## Current Discord Librarires
+## Current Discord Libraries
 
 The vast majority of smaller bots make use of popular libraries such as **discord.js**, **eris** and **discord.py**, all of which share a similar approach to managing this delicate interaction with the Discord API, where -+all components of the bot are located on the same process, on the same machine:
 
@@ -74,7 +74,7 @@ The vast majority of smaller bots make use of popular libraries such as **discor
 
 ## Alternative Approach
 
-An alternative approach is to seperate each key component of the bot into **microservices**, which each run independently - possibly in **containers** using a platform such as **Docker**. There would be a **gateway** package and a **client** package, which would be connected using a **message broker**, such as **RabbitMQ** or **Redis** (using its **pub/sub mechanism**).
+An alternative approach is to separate each key component of the bot into **microservices**, which each run independently - possibly in **containers** using a platform such as **Docker**. There would be a **gateway** package and a **client** package, which would be connected using a **message broker**, such as **RabbitMQ** or **Redis** (using its **pub/sub mechanism**).
 
 This would allow for `x` number of **gateway** instances, and `y` number of **client** instances, which could be deployed independently of each other to adjust for demand. This would allow a bot which is in a **large number of guilds**, but receives **few events** to have a large number of **gateway instances**, but few **client instances**.
 
@@ -96,4 +96,4 @@ These **client** instances could all communicate with an independent **cache**, 
 
 ## Conclusion
 
-A microservice architecture provides a new and interesting way to handle chatbots - in this post, this has focussed on the Discord platform, however these concepts are aplicable to other services which also have comprehensive and detailed API's. I addressed this need for a microservice architecture by developing my own library - Fawkes.js - which provides easy to use and flexible packages that can be deployed in containers.
+A microservice architecture provides a new and interesting way to handle chatbots - in this post, this has focussed on the Discord platform, however these concepts are applicable to other services which also have comprehensive and detailed API's. I addressed this need for a microservice architecture by developing my own library - Fawkes.js - which provides easy to use and flexible packages that can be deployed in containers.
