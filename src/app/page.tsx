@@ -73,7 +73,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex flex-row">
-          <Link href="/cv.pdf" download="cv.pdf">
+          <Link href="/CV.pdf" download="cv.pdf">
             <div className="bg-teal-600 px-4 py-2 rounded-md mr-6 landing-btn">
               <p className="font-bold text-lg ">Download CV</p>
             </div>
