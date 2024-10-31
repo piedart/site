@@ -73,11 +73,11 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex flex-row">
-          <a href="/cv.pdf" download="cv.pdf">
+          <Link href="/cv.pdf" download="cv.pdf">
             <div className="bg-teal-600 px-4 py-2 rounded-md mr-6 landing-btn">
               <p className="font-bold text-lg ">Download CV</p>
             </div>
-          </a>
+          </Link>
           <Link href="/blog">
             <div className="bg-gray-400 px-2 py-1 rounded-md hover:cursor-pointers border-solid border-4 border-transparent hover:bg-transparent hover:border-gray-400 ease-in-out duration-200">
               <p className="font-semibold text-lg ">Read Blog</p>
