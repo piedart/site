@@ -61,7 +61,6 @@ const technologies = [
 export default function Home() {
   return (
     <div className="">
-      <embed src="/cv.pdf" width="800px" height="2100px" />
       <div className="h-screen flex flex-col items-center snap-center section-1">
         <div className="typewriter mt-[30vh] m-5 hidden lg:block">
           <h1 className="font-bold text-4xl text-balance">
