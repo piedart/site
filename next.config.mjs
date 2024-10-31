@@ -5,17 +5,6 @@ const nextConfig = {
       test: /\.mdx$/,
       use: 'raw-loader',
     });
-
-    config.module.rules.push({
-      test: /\.pdf$/,
-      use: {
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-        },
-      },
-    });
-
     return config;
   },
 };
