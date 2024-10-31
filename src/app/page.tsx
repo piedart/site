@@ -61,6 +61,7 @@ const technologies = [
 export default function Home() {
   return (
     <div className="">
+      <embed src="/cv.pdf" width="800px" height="2100px" />
       <div className="h-screen flex flex-col items-center snap-center section-1">
         <div className="typewriter mt-[30vh] m-5 hidden lg:block">
           <h1 className="font-bold text-4xl text-balance">
@@ -73,11 +74,11 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex flex-row">
-          {/* <Link href="/cv.pdf" download="cv.pdf" locale={false} target="_blank" rel="noopener noreferrer">
+          <Link href="/cv.pdf" download="cv.pdf" locale={false} target="_blank" rel="noopener noreferrer">
             <div className="bg-teal-600 px-4 py-2 rounded-md mr-6 landing-btn">
               <p className="font-bold text-lg ">Download CV</p>
             </div>
-          </Link> */}
+          </Link>
           <Link href="/blog">
             <div className="bg-gray-400 px-2 py-1 rounded-md hover:cursor-pointers border-solid border-4 border-transparent hover:bg-transparent hover:border-gray-400 ease-in-out duration-200">
               <p className="font-semibold text-lg ">Read Blog</p>
