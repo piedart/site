@@ -73,11 +73,11 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex flex-row">
-          <Link href="/cv.pdf" download="cv.pdf" locale={false} target="_blank" rel="noopener noreferrer">
+          <a href="/cv.pdf" download="cv.pdf">
             <div className="bg-teal-600 px-4 py-2 rounded-md mr-6 landing-btn">
               <p className="font-bold text-lg ">Download CV</p>
             </div>
-          </Link>
+          </a>
           <Link href="/blog">
             <div className="bg-gray-400 px-2 py-1 rounded-md hover:cursor-pointers border-solid border-4 border-transparent hover:bg-transparent hover:border-gray-400 ease-in-out duration-200">
               <p className="font-semibold text-lg ">Read Blog</p>
