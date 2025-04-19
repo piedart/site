@@ -17,9 +17,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body className={font.className}>
         <ThemeProvider attribute="class" defaultTheme="system">
-          <main className="h-screen w-screen">
+          <main className="h-screen w-screen snap-mandatory" id="main">
             <div className="flex flex-col justify-between min-h-full">
-              <div className="flex flex-col">
+              <div className="h-auto">
                 <Header />
                 <div className="">{children}</div>
               </div>

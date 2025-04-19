@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import path from 'path';
 
@@ -60,39 +61,37 @@ const technologies = [
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="snap-mandatory">
       <div className="h-screen flex flex-col items-center snap-center section-1">
         <div className="typewriter mt-[30vh] m-5 hidden lg:block">
           <h1 className="font-bold text-4xl text-balance">
-            Hi, I&apos;m <span className="text-teal-600">Toby</span> - an Aspiring Computer Scientist
+            Hi, I&apos;m <span className="text-primary">Toby</span> - an Aspiring Computer Scientist
           </h1>
         </div>
         <div className="block lg:hidden mt-[30vh] m-5 text-center">
           <h1 className="font-bold text-4xl">
-            Hi, I&apos;m <span className="text-teal-600">Toby</span> - an Aspiring Computer Scientist
+            Hi, I&apos;m <span className="text-primary">Toby</span> - an Aspiring Computer Scientist
           </h1>
         </div>
         <div className="flex flex-row">
-          <Link href="/CV.pdf" download="cv.pdf">
-            <div className="bg-teal-600 px-4 py-2 rounded-md mr-6 landing-btn">
-              <p className="font-bold text-lg ">Download CV</p>
-            </div>
-          </Link>
-          <Link href="/blog">
-            <div className="bg-gray-400 px-2 py-1 rounded-md hover:cursor-pointers border-solid border-4 border-transparent hover:bg-transparent hover:border-gray-400 ease-in-out duration-200">
-              <p className="font-semibold text-lg ">Read Blog</p>
-            </div>
-          </Link>
+          <Button variant="default" className="m-2">
+            <Link href="/CV.pdf" download="cv.pdf">
+              Download CV
+            </Link>
+          </Button>
+          <Button variant="secondary" className="m-2">
+            <Link href="/blog">Read Blog</Link>
+          </Button>
         </div>
       </div>
 
       <div className="h-screen flex flex-col align-middle items-center snap-center section-2 px-[10%] lg:px-[20%] lg:pt-[10vh]">
         <div className="w-full flex flex-col items-start">
-          <h2 className="text-teal-600 font-bold text-5xl py-[50px]">Education</h2>
+          <h2 className="text-primary font-bold text-5xl py-[50px]">Education</h2>
           <div className="flex flex-row w-full">
             <div className="w-[10%] flex flex-col items-center">
               <div className="rounded-full w-[20px] h-[20px] bg-white shadow-2xl shadow-black">
-                <div className="rounded-full w-[12px] h-[12px] bg-teal-600 m-[4px]"></div>
+                <div className="rounded-full w-[12px] h-[12px] bg-primary m-[4px]"></div>
               </div>
               <div className="h-[80vh] w-[1px] bg-gray-200"></div>
             </div>
@@ -131,11 +130,11 @@ export default function Home() {
 
       <div className="h-screen flex flex-col align-middle items-center snap-center section-3 px-[10%] lg:px-[20%] lg:pt-[10vh]">
         <div className="w-full flex flex-col items-start">
-          <h2 className="text-teal-600 font-bold text-5xl py-[50px]">Work Experience</h2>
+          <h2 className="text-primary font-bold text-5xl py-[50px]">Work Experience</h2>
           <div className="flex flex-row w-full">
             <div className="w-[10%] flex flex-col items-center">
               <div className="rounded-full w-[20px] h-[20px] bg-white shadow-2xl shadow-black">
-                <div className="rounded-full w-[12px] h-[12px] bg-teal-600 m-[4px]"></div>
+                <div className="rounded-full w-[12px] h-[12px] bg-primary m-[4px]"></div>
               </div>
               <div className="h-[80vh] w-[1px] bg-gray-200"></div>
             </div>
@@ -161,7 +160,7 @@ export default function Home() {
 
       <div className=" h-screen flex  align-middle items-center snap-center section-4 px-[10%] lg:px-[20%] lg:pt-[10vh] flex-col justify-between">
         <div className="w-full flex flex-col items-start">
-          <h2 className="text-teal-600 font-bold text-5xl py-[50px]">Skills</h2>
+          <h2 className="text-primary font-bold text-5xl py-[50px]">Skills</h2>
 
           <div className="flex flex-row w-full justify-around">
             <div className="flex flex-col">
@@ -170,7 +169,7 @@ export default function Home() {
                 return (
                   <div className="flex flex-row align-middle items-center my-2" key={i}>
                     <svg viewBox="0 0 128 128" width="24px" height="24px">
-                      <path d={language.svg} fill="#0d9488"></path>
+                      <path d={language.svg} fill="#dd1d4a"></path>
                     </svg>
                     <p className="ml-2">{language.name}</p>
                   </div>
@@ -183,7 +182,7 @@ export default function Home() {
                 return (
                   <div className="flex flex-row align-middle items-center my-2" key={i}>
                     <svg viewBox="0 0 128 128" width="24px" height="24px">
-                      <path d={technology.svg} fill="#0d9488"></path>
+                      <path d={technology.svg} fill="#dd1d4a"></path>
                     </svg>
                     <p className="ml-2">{technology.name}</p>
                   </div>
@@ -197,7 +196,7 @@ export default function Home() {
                 return (
                   <div className="flex flex-row align-middle items-center my-2" key={i}>
                     <svg viewBox="0 0 128 128" width="24px" height="24px">
-                      <path d={ciCd.svg} fill="#0d9488"></path>
+                      <path d={ciCd.svg} fill="#dd1d4a"></path>
                     </svg>
                     <p className="ml-2">{ciCd.name}</p>
                   </div>

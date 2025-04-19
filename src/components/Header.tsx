@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { Button } from './ui/button';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,40 +23,52 @@ export function Header() {
 
   useWidth();
 
+  const [colour, setColour] = useState(false);
+
+  useEffect(() => {
+    const main = document.getElementById("main")
+    if(!main) return;
+    main.addEventListener('scroll', () => {
+      if (main.scrollTop >= screen.height) {
+        setColour(true);
+      } else setColour(false);
+    });
+  });
+
+
+
   return (
-    <div className="w-full">
-      <div className="flex flex-row justify-end w-full items-center">
-        <div className="flex-row mr-24 hidden lg:flex">
-          <Link href="/">
-            <div className="m-3 p-2 rounded-md hover:scale-110 ease-in-out duration-100 hover:cursor-pointer hover:shadow-md hover:font-semibold">
-              <p>
-                <span className="text-teal-600 font-semibold">01.</span> About
+    <div className={`w-full fixed ${colour ? 'bg-white' : ''} ${isOpen ? 'bg-white' : ''}`}>
+      <div className={`flex justify-end w-full ${isOpen ? 'flex-col' : 'flex-row items-center'}`}>
+        <div className={`${isOpen ? 'flex-col' : 'flex-row'} mr-16 hidden lg:flex`}>
+          <Button variant="link" className="hover:scale-105 h-auto p-5">
+            <Link href="/">
+              <p className="text-md">
+                <span className="text-primary font-semibold">01.</span> About
               </p>
-            </div>
-          </Link>
-          <Link href="/blog">
-            <div className="m-3 p-2 rounded-md hover:scale-110 ease-in-out duration-100 hover:cursor-pointer hover:shadow-md hover:font-semibold">
-              <p>
-                <span className="text-teal-600 font-semibold">02.</span> Blog
+            </Link>
+          </Button>
+          <Button variant="link" className="hover:scale-105 h-auto p-5">
+            <Link href="/blog">
+              <p className="text-md">
+                <span className="text-primary font-semibold">02.</span> Blog
               </p>
-            </div>
-          </Link>
-
-          <Link href="/projects">
-            <div className="m-3 p-2 rounded-md hover:scale-110 ease-in-out duration-100 hover:cursor-pointer hover:shadow-md hover:font-semibold">
-              <p>
-                <span className="text-teal-600 font-semibold">03.</span> Projects
+            </Link>
+          </Button>
+          <Button variant="link" className="hover:scale-105 h-auto p-5">
+            <Link href="/projects">
+              <p className="text-md">
+                <span className="text-primary font-semibold">03.</span> Projects
               </p>
-            </div>
-          </Link>
-
-          <Link href="/contact">
-            <div className="m-3 p-2 rounded-md hover:scale-110 ease-in-out duration-100 hover:cursor-pointer hover:shadow-md hover:font-semibold">
-              <p>
-                <span className="text-teal-600 font-semibold">04.</span> Contact
+            </Link>
+          </Button>
+          <Button variant="link" className="hover:scale-105 h-auto p-5">
+            <Link href="/contact">
+              <p className="text-md">
+                <span className="text-primary font-semibold">04.</span> Contact
               </p>
-            </div>
-          </Link>
+            </Link>
+          </Button>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -66,44 +79,10 @@ export function Header() {
           className="lg:hidden mx-5"
           onClick={handleClick}
         >
-          <path d="M4 18L20 18" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" />
-          <path d="M4 12L20 12" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" />
-          <path d="M4 6L20 6" stroke="#0d9488" strokeWidth="2" strokeLinecap="round" />
+          <path d="M4 18L20 18" stroke="#dd1d4a" strokeWidth="2" strokeLinecap="round" />
+          <path d="M4 12L20 12" stroke="#dd1d4a" strokeWidth="2" strokeLinecap="round" />
+          <path d="M4 6L20 6" stroke="#dd1d4a" strokeWidth="2" strokeLinecap="round" />
         </svg>
-      </div>
-      <div className={`w-full ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="flex flex-col mb-16">
-          <Link href="/">
-            <div className="ml-10 m-3 p-2 rounded-md hover:scale-110 ease-in-out duration-100 hover:cursor-pointer hover:shadow-md hover:font-semibold">
-              <p>
-                <span className="text-teal-600 font-semibold">01.</span> About
-              </p>
-            </div>
-          </Link>
-          <Link href="/blog">
-            <div className="ml-10 m-3 p-2 rounded-md hover:scale-110 ease-in-out duration-100 hover:cursor-pointer hover:shadow-md hover:font-semibold">
-              <p>
-                <span className="text-teal-600 font-semibold">02.</span> Blog
-              </p>
-            </div>
-          </Link>
-
-          <Link href="/projects">
-            <div className="ml-10 m-3 p-2 rounded-md hover:scale-110 ease-in-out duration-100 hover:cursor-pointer hover:shadow-md hover:font-semibold">
-              <p>
-                <span className="text-teal-600 font-semibold">03.</span> Projects
-              </p>
-            </div>
-          </Link>
-
-          <Link href="/contact">
-            <div className="ml-10 m-3 p-2 rounded-md hover:scale-110 ease-in-out duration-100 hover:cursor-pointer hover:shadow-md hover:font-semibold">
-              <p>
-                <span className="text-teal-600 font-semibold">04.</span> Contact
-              </p>
-            </div>
-          </Link>
-        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 export default function contact() {
   return (
     <div className="w-screen px-[10%] lg:px-[20%] mt-[10vh]">
-      <h2 className="text-teal-600 font-bold text-5xl">Contact Me</h2>
+      <h2 className="text-primary font-bold text-5xl">Contact Me</h2>
 
       <p className="text-lg my-3">If you have any questions or queries, please do contact me using any of the methods below.</p>
       <div className="mt-10">
