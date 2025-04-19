@@ -46,7 +46,7 @@ const projectsData = [
 
 export default function BlogPage() {
   return (
-    <div className="w-screen px-[5%] lg:px-[20%] lg:pt-[10vh]h-screen">
+    <div className="w-screen px-[5%] lg:px-[20%] lg:pt-[10vh]h-screen  mt-[10vh]">
       <h2 className="text-primary font-bold text-5xl px-[5%]">Projects</h2>
       <div className="flex flex-wrap mt-32">
         {projectsData.map((project) => {
